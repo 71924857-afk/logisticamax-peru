@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogísticaMax Perú | Soluciones Logísticas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header class="cabecera">
+    <div class="contenedor barra-nav">
+      <div class="logo">
+        <!-- Efecto 3: Ícono SVG de camión animado -->
+        <svg class="camion-logo" viewBox="0 0 40 26" width="38" height="26">
+          <rect x="2" y="6" width="22" height="14" rx="2" fill="#e2861a"></rect>
+          <rect x="24" y="10" width="11" height="10" rx="1" fill="#ffffff"></rect>
+          <circle class="rueda" cx="10" cy="21" r="3.5" fill="#0d2438"></circle>
+          <circle class="rueda" cx="29" cy="21" r="3.5" fill="#0d2438"></circle>
+        </svg>
+        <p class="logo-texto">LogísticaMax <span>Perú</span></p>
+      </div>
+
+      <input type="checkbox" id="menuCheck" class="menu-check">
+      <label for="menuCheck" class="menu-boton">☰ Menú</label>
+
+      <!-- Transición 3: Color en el menú -->
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#cotizador">Cotizador</a></li>
+          <li><a href="#seguimiento">Seguimiento</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (Efecto 1: Degradado en el encabezado) -->
+    <section id="inicio" class="hero">
+      <div class="contenedor hero-contenido">
+        <h1>Transporte de Carga y Cadena de Suministro</h1>
+        <p>Soluciones operativas en transporte pesado, distribución de última milla y almacenamiento estratégico a nivel nacional.</p>
+        <!-- Transición 2: Color en el botón de cotización -->
+        <a href="#cotizador" class="boton btn-hero">Cotizar Carga Ahora</a>
+      </div>
+    </section>
+
+    <!-- SERVICIOS CON IMÁGENES DEDICADAS -->
+    <section id="servicios" class="servicios">
+      <div class="contenedor">
+        <h2>Nuestros Servicios</h2>
+        <p class="subtitulo-seccion">Especialistas en logística integral y control operacional</p>
+
+        <!-- Animación 3: Aparición progresiva + Transición 1: Elevación de tarjetas -->
+        <div class="tarjetas">
+          
+          <article class="tarjeta">
+            <div class="tarjeta-imagen">
+              <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&auto=format&fit=crop" alt="Transporte de Carga">
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Transporte de Carga</h3>
+              <p>Cotiza el transporte de tu mercadería a nivel nacional con flotas de carga pesada y liviana monitoreadas vía GPS.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-imagen">
+              <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&auto=format&fit=crop" alt="Seguimiento de Envíos">
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Seguimiento de Envíos</h3>
+              <p>Monitorea la ubicación exacta y el estado de tu mercadería en tiempo real durante cada fase del recorrido.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta-imagen">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop" alt="Gestión de Almacenes">
+            </div>
+            <div class="tarjeta-cuerpo">
+              <h3>Gestión de Almacenes</h3>
+              <p>Infraestructura moderna de almacenamiento con control de stock automatizado y gestión de inventarios.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COTIZADOR DE CARGA (RF-35.1) -->
+    <section id="cotizador" class="cotizador">
+      <div class="contenedor caja-cotizador">
+        <div class="bloque-form">
+          <h2>Cotizador de Carga</h2>
+          <p class="desc-form">Ingresa los datos requeridos para calcular tu presupuesto logístico:</p>
+
+          <form action="#cotizador" method="get" class="formulario-cotizar">
+            <div class="campo">
+              <label for="origen">Origen</label>
+              <input type="text" id="origen" name="origen" placeholder="Ej. Huancayo" required>
+            </div>
+
+            <div class="campo">
+              <label for="destino">Destino</label>
+              <input type="text" id="destino" name="destino" placeholder="Ej. Lima" required>
+            </div>
+
+            <div class="campo">
+              <label for="tipo">Tipo de Carga</label>
+              <select id="tipo" name="tipo" required>
+                <option value="" disabled selected>Selecciona un tipo</option>
+                <option value="general">Carga General</option>
+                <option value="refrigerada">Carga Refrigerada</option>
+                <option value="fragil">Carga Frágil</option>
+                <option value="granel">Carga a Granel</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="peso">Peso Total (kg)</label>
+              <input type="number" id="peso" name="peso" min="1" placeholder="Ej. 500" required>
+            </div>
+
+            <button type="submit" class="boton btn-form">Calcular Cotización</button>
+
+            <!-- Animación 2: Confirmación animada al cotizar carga -->
+            <div class="mensaje-ok">
+              ✔ <strong>¡Solicitud enviada!</strong> Un asesor te enviará la cotización formal.
+            </div>
+          </form>
+        </div>
+
+        <!-- Imagen Adaptativa HTML5 (<picture> + <figcaption>) -->
+        <figure class="imagen-almacen">
+          <picture>
+            <source media="(min-width: 768px)" srcset="https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&auto=format&fit=crop" 
+                 alt="Almacén Central de LogísticaMax Perú" 
+                 width="500" height="350">
+          </picture>
+          <figcaption>Centro logístico principal de distribución y custodia de mercancías.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SEGUIMIENTO DE ENVÍO (RF-35.2) -->
+    <section id="seguimiento" class="seguimiento">
+      <div class="contenedor">
+        <h2>Seguimiento de Envío</h2>
+        <p class="subtitulo-seccion">Selecciona la etapa para visualizar el avance del trayecto:</p>
+
+        <div class="etapas">
+          <input type="radio" name="etapa" id="etapa1" class="radio-etapa" checked>
+          <label for="etapa1">1. Recolectado</label>
+
+          <input type="radio" name="etapa" id="etapa2" class="radio-etapa">
+          <label for="etapa2">2. Almacén</label>
+
+          <input type="radio" name="etapa" id="etapa3" class="radio-etapa">
+          <label for="etapa3">3. En Ruta</label>
+
+          <input type="radio" name="etapa" id="etapa4" class="radio-etapa">
+          <label for="etapa4">4. Entregado</label>
+
+          <!-- Efecto 2: Sombra en la línea de tiempo -->
+          <div class="linea-tiempo-caja">
+            <div class="pista">
+              <!-- Animación 1: Barra de progreso en la línea de tiempo -->
+              <div class="barra"></div>
+            </div>
+
+            <ul class="pasos">
+              <li>Recolectado</li>
+              <li>Almacén</li>
+              <li>En Ruta</li>
+              <li>Entregado</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+      <div class="contenedor">
+        <h2>Contacto Directo</h2>
+        <div class="datos-contacto">
+          <div class="item-contacto">
+            <span class="ico-contacto">📞</span>
+            <p><strong>Teléfono:</strong> +51 964 000 000</p>
+          </div>
+          <div class="item-contacto">
+            <span class="ico-contacto">✉</span>
+            <p><strong>Correo:</strong> contacto@logisticamax.pe</p>
+          </div>
+          <div class="item-contacto">
+            <span class="ico-contacto">📍</span>
+            <p><strong>Sede Central:</strong> Huancayo, Junín, Perú</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>&copy; 2026 LogísticaMax Perú — Asignatura de Diseño Web</p>
+    </div>
+  </footer>
+
+</body>
+</html>
